@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Burtov_11._10._2023.Components;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,6 @@ namespace Burtov_11._10._2023
     /// </summary>
     public partial class App : Application
     {
+        public static HardwareShopEntities db = new HardwareShopEntities();
     }
 }

@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:Burtov_11._10._2023"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid> 
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible">
+
+            <WrapPanel Name="ProductsWrapPanel">
+                
+            </WrapPanel>
+
+    </ScrollViewer>
     </Grid>
 </Window>

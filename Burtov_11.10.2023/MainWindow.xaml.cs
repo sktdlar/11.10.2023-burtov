@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Burtov_11._10._2023.Components;
+using Burtov_11._10._2023.Components.PartialClass;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,11 @@ namespace Burtov_11._10._2023
         public MainWindow()
         {
             InitializeComponent();
+            var products = App.db.Product.ToList();
+            foreach (var product in products)
+            {
+                ProductsWrapPanel.Children.Add(new UserControls.ProductUserControl(product.Id, product.Title, product.Discount, product.Cost/*, product.AVG)*/));
+            }
         }
     }
 }
