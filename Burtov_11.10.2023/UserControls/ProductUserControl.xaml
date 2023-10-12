@@ -7,25 +7,25 @@
              mc:Ignorable="d" 
              d:DesignHeight="450"  MinWidth="200" MaxWidth="300">
 
-            <Grid>
-        
+    <Grid>
+
 
         <StackPanel>
-            
+
             <Image Name="ProductImg" Height="200" VerticalAlignment="Top" Margin="30" Source="/Source/StaticPhoto.png" />
             <TextBlock Margin="40 0 0 0" FontFamily="Arial" FontSize="20" Text="Холодильник" TextWrapping="Wrap" Name="TitleTb"/>
             <StackPanel Orientation="Horizontal">
-                <TextBlock Margin="40 10 0 0" FontSize="20" FontFamily="Arial" Foreground="Red" Text="★ 4,5" Name="FeedAVG"/>
+                <TextBlock Margin="40 10 0 0" FontSize="20" FontWeight="Bold" FontFamily="Arial" Foreground="Red" Text="★ 4,5" Name="FeedAVG"/>
                 <TextBlock Margin="10 10 0 0" FontSize="18" TextWrapping="Wrap" FontFamily="Arial" Foreground="Gray" Text="41 отзыв" Name="CountOfFeedbackTb"/>
             </StackPanel>
 
             <TextBlock Margin="40 10 0 0" FontSize="24" FontWeight="Bold" FontFamily="Arial" Text="20000" Name="CostTb"/>
             <StackPanel Orientation="Horizontal">
-                <Border  HorizontalAlignment="Left" Margin="20 0 0 0" BorderThickness="5" Width="100" Height="50" BorderBrush="Red" CornerRadius="10">
+                <Border  HorizontalAlignment="Left" Margin="20 0 0 0" BorderThickness="5" Width="100" Height="50" BorderBrush="Red" CornerRadius="5">
                     <Button  BorderBrush="Red" Background="Red">
-                    <TextBlock Foreground="White" FontWeight="Bold" FontSize="16">Купить!!</TextBlock>
-                </Button>
-            </Border>
+                        <TextBlock Foreground="White" FontWeight="Bold" FontSize="16">Купить!!</TextBlock>
+                    </Button>
+                </Border>
                 <Button Margin="20" BorderBrush="{x:Null}" Background="{x:Null}">
                     <Image Height="20" Source="/Source/LikeBtnPic.png" />
                 </Button>
@@ -33,17 +33,34 @@
                     <TextBlock FontWeight="Bold" FontSize="16">Отзывы</TextBlock>
                 </Button>
             </StackPanel>
-            
-           
+
+
         </StackPanel>
-            
-        <Rectangle Name="DiscountRect" HorizontalAlignment="Right" Margin="40" Fill="Red" Width="50" Height="35">
+
+        <Rectangle Name="DiscountRect" HorizontalAlignment="Right" Margin="40" Fill="#FF12A2BF" Width="50" Height="35" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-20"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
             <Rectangle.Effect>
-                <DropShadowEffect ShadowDepth="5" BlurRadius="5" Opacity="0.4" Color="black"></DropShadowEffect>
+                <DropShadowEffect ShadowDepth="5" BlurRadius="0" Color="black"></DropShadowEffect>
             </Rectangle.Effect>
-            
+
         </Rectangle>
-        <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 50 0" FontFamily="Arial" FontWeight="ExtraBold" Text="-18%" Name="DiscountTb"/>
+        <TextBlock Foreground="White" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 43 0" FontFamily="Arial" FontWeight="ExtraBold" Text="-18%" Name="DiscountTb" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-20"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
 
     </Grid>
 

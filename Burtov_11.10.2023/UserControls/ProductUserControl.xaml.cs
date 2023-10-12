@@ -21,7 +21,7 @@ namespace Burtov_11._10._2023.UserControls
     public partial class ProductUserControl : UserControl
     {
         public static int SelectedUserId { get; set; }
-        public ProductUserControl(int id, string Title, double? Discount, decimal Cost/*, string AVGdiscount, string DisCount*/)
+        public ProductUserControl(int id, string Title, double? Discount, decimal Cost, string AVGdiscount, string DisCount)
         {
             InitializeComponent();
             TitleTb.Text = Title;
@@ -36,7 +36,8 @@ namespace Burtov_11._10._2023.UserControls
                 DiscountRect.Visibility = Visibility.Collapsed;
             }
             CostTb.Text = $"{Math.Round(Cost, 2)}₽";
-            //FeedAVG.Text = AVGdiscount;
+            FeedAVG.Text = $"★ {AVGdiscount}";
+            CountOfFeedbackTb.Text = DisCount;
 
         }
     }
