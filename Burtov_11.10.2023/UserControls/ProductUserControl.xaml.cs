@@ -35,7 +35,12 @@ namespace Burtov_11._10._2023.UserControls
                 DiscountTb.Visibility = Visibility.Collapsed;
                 DiscountRect.Visibility = Visibility.Collapsed;
             }
-            CostTb.Text = $"{Math.Round(Cost, 2)}₽";
+            if(Discount != 0)
+            {
+                DiscountCostTb.Visibility = Visibility.Visible;
+                DiscountCostTb.Text = Math.Round(Cost, 2).ToString();
+            }
+            CostTb.Text = $"{Math.Round(Cost - (Cost * (decimal)Discount / 100), 2)}₽";
             FeedAVG.Text = $"★ {AVGdiscount}";
             CountOfFeedbackTb.Text = DisCount;
 

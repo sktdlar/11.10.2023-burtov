@@ -18,8 +18,12 @@
                 <TextBlock Margin="40 10 0 0" FontSize="20" FontWeight="Bold" FontFamily="Arial" Foreground="Red" Text="★ 4,5" Name="FeedAVG"/>
                 <TextBlock Margin="10 10 0 0" FontSize="18" TextWrapping="Wrap" FontFamily="Arial" Foreground="Gray" Text="41 отзыв" Name="CountOfFeedbackTb"/>
             </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="30 10 0 0" FontSize="24" FontWeight="Bold" FontFamily="Arial" Visibility="Visible" TextDecorations="Strikethrough" x:Name="DiscountCostTb"/>
 
-            <TextBlock Margin="40 10 0 0" FontSize="24" FontWeight="Bold" FontFamily="Arial" Text="20000" Name="CostTb"/>
+                <TextBlock Margin="30 10 0 0" FontSize="24" FontWeight="Bold" FontFamily="Arial" Text="20000" Name="CostTb"/>
+
+            </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Border  HorizontalAlignment="Left" Margin="20 0 0 0" BorderThickness="5" Width="100" Height="50" BorderBrush="Red" CornerRadius="5">
                     <Button  BorderBrush="Red" Background="Red">
