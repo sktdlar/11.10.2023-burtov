@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Данил\source\repos\Burtov_11.10.2023\Burtov_11.10.2023\App.xaml
-2-1035333187
+4-1063017683
 2-1407320939
-13-1195422094
+15228026282
 182001659827
-MainWindow.xaml;UserControls\ProductUserControl.xaml;
+MainWindow.xaml;Pages\AddNewProductPage.xaml;Pages\ProductsPage.xaml;UserControls\ProductUserControl.xaml;
 
 False
 

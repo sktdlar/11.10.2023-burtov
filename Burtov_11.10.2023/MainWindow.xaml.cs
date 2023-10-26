@@ -1,4 +1,6 @@
 ﻿using Burtov_11._10._2023.Components;
+using Burtov_11._10._2023.Pages;
+using Burtov_11._10._2023.UserControls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,14 +23,12 @@ namespace Burtov_11._10._2023
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
-            var products = App.db.Product.ToList();
-            foreach (var product in products)
-            {
-                ProductsWrapPanel.Children.Add(new UserControls.ProductUserControl(product.Id, product.Title, product.Discount, product.Cost, product.AVGdiscount, product.DisCount));
-            }
+            MainFrame.Navigate(new Pages.ProductsPage());
+
         }
     }
 }

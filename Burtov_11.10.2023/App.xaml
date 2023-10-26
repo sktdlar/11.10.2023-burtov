@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:Burtov_11._10._2023"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Border">
+            <Setter Property="CornerRadius" Value="5"/>
+        </Style>
     </Application.Resources>
 </Application>

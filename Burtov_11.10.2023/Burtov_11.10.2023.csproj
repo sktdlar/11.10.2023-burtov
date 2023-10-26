@@ -65,6 +65,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Components\PartialClass\product.cs" />
+    <Compile Include="Pages\AddNewProductPage.xaml.cs">
+      <DependentUpon>AddNewProductPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProductsPage.xaml.cs">
+      <DependentUpon>ProductsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ProductUserControl.xaml.cs">
       <DependentUpon>ProductUserControl.xaml</DependentUpon>
     </Compile>
@@ -104,6 +110,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AddNewProductPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ProductsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\ProductUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
