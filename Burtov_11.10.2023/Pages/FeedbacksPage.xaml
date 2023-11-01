@@ -9,19 +9,24 @@
       Title="FeedbacksPage">
 
     <Grid>
-        <StackPanel>
-            <DataGrid Name="FeedsDG">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Product" Binding="{Binding ProductId.Title}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Evaluation" Binding="{Binding Evaluation}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Pros" Binding="{Binding Pros}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Cons" Binding="{Binding Cons}"></DataGridTextColumn>
-                </DataGrid.Columns>
-            </DataGrid>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="413*"/>
+            <RowDefinition Height="37*"/>
+        </Grid.RowDefinitions><ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled">
+            <StackPanel>
+                <DataGrid IsReadOnly="True" AutoGenerateColumns="False" Name="FeedsDG">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Product" Binding="{Binding Title}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Evaluation" Binding="{Binding Evaluation}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Pros" Binding="{Binding Pros}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Cons" Binding="{Binding Cons}"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+            </ScrollViewer>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.RowSpan="2">
             <TextBlock VerticalAlignment="Center" Margin="10">Оценки</TextBlock>
-            <ComboBox Name="SortCb" SelectedIndex="0" Margin="10 10 20 10" SelectionChanged="SortCb_SelectionChanged">
+            <ComboBox Name="SortCb" Width="100" Margin="10 10 20 10" SelectionChanged="SortCb_SelectionChanged">
                 <ComboBoxItem>По умолчанию</ComboBoxItem>
                 <ComboBoxItem>1</ComboBoxItem>
                 <ComboBoxItem>2</ComboBoxItem>
@@ -30,11 +35,16 @@
                 <ComboBoxItem>5</ComboBoxItem>
             </ComboBox>
             <TextBlock VerticalAlignment="Center" Margin="10">Фильтр</TextBlock>
-            <ComboBox Margin="10" Name="OrderCb" SelectedIndex="0">
+            <ComboBox Width="100" Margin="10" Name="OrderCb">
                 <ComboBoxItem>По умолчанию</ComboBoxItem>
-                <ComboBoxItem>По возрастанию оценок</ComboBoxItem>
-                <ComboBoxItem>По убыванию оценок</ComboBoxItem>
+                <ComboBoxItem>По возрастанию</ComboBoxItem>
+                <ComboBoxItem>По убыванию</ComboBoxItem>
             </ComboBox>
+            <Button Height="25" Width="75" Click="Button_Click">
+                <StackPanel >
+                    <TextBlock>Назад</TextBlock>
+                </StackPanel>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>

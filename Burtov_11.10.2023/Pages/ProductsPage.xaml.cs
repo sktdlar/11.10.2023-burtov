@@ -129,7 +129,7 @@ namespace Burtov_11._10._2023.Pages
 
         private void Feedbacks_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Pages.FeedbacksPage());
+            NavigationService.Navigate(new Pages.FeedbacksPage(new Product()));
         }
     }
 }

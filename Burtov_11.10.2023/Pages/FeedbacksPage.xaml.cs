@@ -21,20 +21,28 @@ namespace Burtov_11._10._2023.Pages
     /// </summary>
     public partial class FeedbacksPage : Page
     {
-        public FeedbacksPage()
+        Product product {get; set;}
+        public FeedbacksPage(Product _product)
         {
             InitializeComponent();
+            product = _product;
             Refresh();
         }
         public void Refresh()
         {
+            
             IEnumerable<Feedback> flist1 = App.db.Feedback.ToList();
             var feedbacks = flist1.Join(App.db.Product.ToList(),
                 x => x.ProductId,
                 y => y.Id,
-                (x, y) =>  new { y.Title, x.Evaluation, x.Pros, x.Cons  }
+                (x, y) =>  new {y.Title, x.Evaluation, x.Pros, x.Cons  }
                 );
-            if(SortCb.SelectedIndex != 0)
+            if(product.Id != 0)
+            {
+                feedbacks = feedbacks.Where(x => x.Title == product.Title);
+            }
+
+            if (SortCb != null)
             {
                 if (SortCb.SelectedIndex == 1)
                     feedbacks = feedbacks.Where(x => x.Evaluation == 1);
@@ -47,7 +55,7 @@ namespace Burtov_11._10._2023.Pages
                 if (SortCb.SelectedIndex == 5)
                     feedbacks = feedbacks.Where(x => x.Evaluation == 5);
             }
-            if(OrderCb.SelectedIndex != 0)
+            if(OrderCb != null)
             {
                 if(OrderCb.SelectedIndex == 1)
                 {
@@ -58,11 +66,17 @@ namespace Burtov_11._10._2023.Pages
                     feedbacks = feedbacks.OrderByDescending(x => x.Evaluation).ToList();
                 }
             }
+            FeedsDG.ItemsSource = feedbacks;
             
         }
         private void SortCb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Refresh();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
         }
     }
 }

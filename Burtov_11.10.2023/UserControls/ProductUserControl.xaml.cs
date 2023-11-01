@@ -69,5 +69,10 @@ namespace Burtov_11._10._2023.UserControls
                 else
                     MessageBox.Show("Вам нравится");
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GetNavigationService(this).Navigate(new Pages.FeedbacksPage(Product));
+        }
     }
 }
