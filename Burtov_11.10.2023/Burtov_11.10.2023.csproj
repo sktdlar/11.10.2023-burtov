@@ -68,6 +68,9 @@
     <Compile Include="Pages\AddNewProductPage.xaml.cs">
       <DependentUpon>AddNewProductPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\FeedbacksPage.xaml.cs">
+      <DependentUpon>FeedbacksPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ProductsPage.xaml.cs">
       <DependentUpon>ProductsPage.xaml</DependentUpon>
     </Compile>
@@ -111,6 +114,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\AddNewProductPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FeedbacksPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

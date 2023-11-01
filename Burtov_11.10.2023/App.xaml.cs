@@ -15,5 +15,6 @@ namespace Burtov_11._10._2023
     public partial class App : Application
     {
         public static HardwareShopEntities db = new HardwareShopEntities();
+        public static Boolean IsAdmin = false;
     }
 }

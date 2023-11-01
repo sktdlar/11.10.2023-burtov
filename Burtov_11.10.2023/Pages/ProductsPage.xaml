@@ -20,7 +20,12 @@
             <Rectangle Fill="#A1F0A1">
 
             </Rectangle>
-            <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible" Grid.Row="1">
+        <Button Name="Feedbacks" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0"  Click="Feedbacks_Click">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock>Все отзывы</TextBlock>
+            </StackPanel>
+        </Button>
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible" Grid.Row="1">
 
                 <WrapPanel HorizontalAlignment="Center" Name="ProductsWrapPanel">
 
@@ -51,11 +56,17 @@
                         <TextBlock>Добавить</TextBlock>
                     </StackPanel>
                 </Button>
-                <Button Name="GoBackBtn" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10 0 10 0"  Click="GoBackBtn_Click">
-                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <TextBlock>Назад</TextBlock>
-                    </StackPanel>
-                </Button>
+            <Button Name="GoBackBtn" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10 0 10 0"  Click="GoBackBtn_Click">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock>Назад</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Name="AdminBtn" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0"  Click="AdminBtn_Click">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock>Админ</TextBlock>
+                </StackPanel>
+            </Button>
+            <TextBox Name="AdmPasTb" VerticalAlignment="Center" Width="50"></TextBox>
         </StackPanel>
 
         </Grid>

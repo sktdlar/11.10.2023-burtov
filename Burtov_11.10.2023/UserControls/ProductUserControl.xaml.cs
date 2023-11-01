@@ -64,8 +64,10 @@ namespace Burtov_11._10._2023.UserControls
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-             NavigationService.GetNavigationService(this).Navigate(new Pages.AddNewProductPage(Product));
-            
+            if (App.IsAdmin is true)
+                    NavigationService.GetNavigationService(this).Navigate(new Pages.AddNewProductPage(Product));
+                else
+                    MessageBox.Show("Вам нравится");
         }
     }
 }

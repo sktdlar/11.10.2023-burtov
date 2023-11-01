@@ -111,6 +111,26 @@ namespace Burtov_11._10._2023.Pages
         {
             Refresh();
         }
+
+        private void AdminBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if(AdmPasTb.Text == "0")
+            {
+                App.IsAdmin = true;
+                MessageBox.Show("Вы теперь админ");
+                AdmPasTb.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Не успешно");
+                AdmPasTb.Text = "";
+            }
+        }
+
+        private void Feedbacks_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Pages.FeedbacksPage());
+        }
     }
 }
 

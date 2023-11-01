@@ -27,3 +27,5 @@ C:\Users\Данил\source\repos\Burtov_11.10.2023\Burtov_11.10.2023\obj\Debug\P
 C:\Users\Данил\source\repos\Burtov_11.10.2023\Burtov_11.10.2023\obj\Debug\Pages\AddNewProductPage.baml
 C:\Users\Данил\source\repos\Burtov_11.10.2023\Burtov_11.10.2023\obj\Debug\Pages\ProductsPage.g.cs
 C:\Users\Данил\source\repos\Burtov_11.10.2023\Burtov_11.10.2023\obj\Debug\Pages\ProductsPage.baml
+C:\Users\Данил\source\repos\Burtov_11.10.2023\Burtov_11.10.2023\obj\Debug\Pages\FeedbacksPage.g.cs
+C:\Users\Данил\source\repos\Burtov_11.10.2023\Burtov_11.10.2023\obj\Debug\Pages\FeedbacksPage.baml
